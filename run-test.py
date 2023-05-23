@@ -14,7 +14,7 @@ if __name__ == '__main__':
     #       ])
 
 # 可直接运行，如果想定位问题，可直接debug模式运行
-    main_run(["/Users/wyq/Documents/tcyl/htp4/HttpRunner4/demo/testcases/demo_json格式post请求.yml",  # case路径
+    main_run([r"D:\Python\Httprunner_Demo\demo\testcases\pytestCaseDemo",  # case路径
               '-v',
               # '-s',
               '--report=hhhhhh.html',
