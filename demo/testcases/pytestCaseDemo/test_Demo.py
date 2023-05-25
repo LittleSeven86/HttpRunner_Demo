@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 '''
 -----------------------------------------------------------
-    @FileName  :testDemo.py
+    @FileName  :test_Demo.py
     @Time      :2023/5/22 22:07
     @Author    :LittleSeven
     @Address   ：https://gitee.com/linguchong/Django_Project_Demo.git

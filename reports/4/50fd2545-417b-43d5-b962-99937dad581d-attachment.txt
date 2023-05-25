@@ -1,0 +1,2 @@
+2023-05-25 21:04:55.480 | INFO | run step begin: GET请求测试用例 >>>>>>
+2023-05-25 21:04:55.481 | INFO | generate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/93a1120f-160d-4650-88ff-4ab0fd61db50.run.log

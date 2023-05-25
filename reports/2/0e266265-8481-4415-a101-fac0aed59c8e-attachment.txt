@@ -1,0 +1,261 @@
+[32m2023-05-25 20:39:16.364[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m222[0m - [1mStart to run testcase: 登录接口, TestCase ID: c97ca6ee-20e1-4f43-a41a-43091d1ecbc2[0m
+[32m2023-05-25 20:39:16.366[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m181[0m - [1mrun step begin: 登录接口 >>>>>>[0m
+[32m2023-05-25 20:39:16.367[0m | [34m[1mDEBUG   [0m | [36mhttprunner.step_request[0m:[36mrun_step_request[0m:[36m131[0m - [34m[1m====== request details ======
+url: https://zpdemo.xfsaas.cn/api/leapp/login/login-sms
+method: POST
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "Content-Type": "application/json;charset=UTF-8",
+    "god": "true",
+    "HRUN-Request-ID": "HRUN-c97ca6ee-20e1-4f43-a41a-43091d1ecbc2-356367"
+}
+json: {
+    "loginName": "",
+    "mobile": "16000005576",
+    "password": "",
+    "smsCode": "123456"
+}
+[0m
+[32m2023-05-25 20:39:16.518[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m185[0m - [34m[1mclient IP: 192.168.3.28, Port: 51177[0m
+[32m2023-05-25 20:39:16.518[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m193[0m - [34m[1mserver IP: 42.62.43.219, Port: 443[0m
+[32m2023-05-25 20:39:16.518[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m39[0m - [34m[1m
+================== request details ==================
+method   : POST
+url      : https://zpdemo.xfsaas.cn/api/leapp/login/login-sms
+headers  : {
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "god": "true",
+    "HRUN-Request-ID": "HRUN-c97ca6ee-20e1-4f43-a41a-43091d1ecbc2-356367",
+    "Content-Length": "79"
+}
+cookies  : {}
+body     : {
+    "loginName": "",
+    "mobile": "16000005576",
+    "password": "",
+    "smsCode": "123456"
+}
+[0m
+[32m2023-05-25 20:39:16.519[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m39[0m - [34m[1m
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "Tengine",
+    "Date": "Thu, 25 May 2023 12:39:16 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Methods": "GET,POST,PUT,HEAD,DELETE",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*",
+    "Set-Cookie": "SESSION=NzVhNjE5YWYtZjk2NS00ZTVhLTk0OWMtN2Y1YzkwMTE1NDBj; Path=/; HttpOnly"
+}
+cookies  : {
+    "SESSION": "NzVhNjE5YWYtZjk2NS00ZTVhLTk0OWMtN2Y1YzkwMTE1NDBj"
+}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "flag": true,
+    "code": "000000",
+    "desc": "成功",
+    "data": {
+        "accounts": [
+            {
+                "id": 378,
+                "accountId": "63f29db0e1eb473291d44b26cf881742",
+                "registerChannel": "official",
+                "registerMethod": "sms",
+                "belongToTenant": "personal",
+                "username": "悟空",
+                "accountName": "4jtkp7bq",
+                "accountTitle": "我的个人账号",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountStatus": "normal",
+                "collectToAccount": "",
+                "createTime": "2022-10-25 15:10:50",
+                "updateTime": "2022-10-25 15:12:20"
+            },
+            {
+                "id": 398,
+                "accountId": "3d0ae37fb3f34c61bb66268bdf26eff7",
+                "registerChannel": "interview",
+                "registerMethod": "api",
+                "belongToTenant": "8ad6b4f9710711eca50e2a63cd90d41b",
+                "username": "悟空",
+                "accountName": "6gnn5yz2",
+                "accountTitle": "科大讯飞股份有限公司(校招)",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountStatus": "normal",
+                "collectToAccount": "",
+                "createTime": "2022-11-10 14:53:52",
+                "updateTime": "2022-11-10 14:53:52"
+            },
+            {
+                "id": 690,
+                "accountId": "b54a57e61aad4010b001c6124fce48ad",
+                "registerChannel": "official",
+                "registerMethod": "api",
+                "belongToTenant": "96493b227fa6b8a565dfebbb6379e6c3",
+                "username": "悟空",
+                "accountName": "iiv210og0jcj0l0i",
+                "accountTitle": "科大讯飞测试-悟空",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountStatus": "normal",
+                "collectToAccount": "",
+                "createTime": "2023-05-11 15:29:57",
+                "updateTime": "2023-05-11 15:29:57"
+            }
+        ],
+        "tenantAccount": [
+            {
+                "tenantId": "8ad6b4f9710711eca50e2a63cd90d41b",
+                "tenantName": "科大讯飞股份有限公司(校招)",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountId": "3d0ae37fb3f34c61bb66268bdf26eff7",
+                "username": null,
+                "mobile": null,
+                "email": null,
+                "roleId": "interviewer",
+                "roleName": null,
+                "standardRole": "interviewer"
+            },
+            {
+                "tenantId": "96493b227fa6b8a565dfebbb6379e6c3",
+                "tenantName": "科大讯飞测试",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountId": "b54a57e61aad4010b001c6124fce48ad",
+                "username": null,
+                "mobile": null,
+                "email": null,
+                "roleId": "interviewer",
+                "roleName": null,
+                "standardRole": "interviewer"
+            }
+        ],
+        "username": "悟空",
+        "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+        "authType": "sms",
+        "mobile": "16000005576",
+        "token": "75a619af-f965-4e5a-949c-7f5c9011540c",
+        "loginSsoId": null,
+        "new": false
+    }
+}
+[0m
+[32m2023-05-25 20:39:16.519[0m | [1mINFO    [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m216[0m - [1mstatus_code: 200, response_time(ms): 150.69 ms, response_length: 0 bytes[0m
+[32m2023-05-25 20:39:16.519[0m | [34m[1mDEBUG   [0m | [36mhttprunner.step_request[0m:[36mrun_step_request[0m:[36m151[0m - [34m[1m====== response details ======
+status_code: 200
+headers: {
+    "Server": "Tengine",
+    "Date": "Thu, 25 May 2023 12:39:16 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Methods": "GET,POST,PUT,HEAD,DELETE",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*",
+    "Set-Cookie": "SESSION=NzVhNjE5YWYtZjk2NS00ZTVhLTk0OWMtN2Y1YzkwMTE1NDBj; Path=/; HttpOnly"
+}
+body: {
+    "flag": true,
+    "code": "000000",
+    "desc": "成功",
+    "data": {
+        "accounts": [
+            {
+                "id": 378,
+                "accountId": "63f29db0e1eb473291d44b26cf881742",
+                "registerChannel": "official",
+                "registerMethod": "sms",
+                "belongToTenant": "personal",
+                "username": "悟空",
+                "accountName": "4jtkp7bq",
+                "accountTitle": "我的个人账号",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountStatus": "normal",
+                "collectToAccount": "",
+                "createTime": "2022-10-25 15:10:50",
+                "updateTime": "2022-10-25 15:12:20"
+            },
+            {
+                "id": 398,
+                "accountId": "3d0ae37fb3f34c61bb66268bdf26eff7",
+                "registerChannel": "interview",
+                "registerMethod": "api",
+                "belongToTenant": "8ad6b4f9710711eca50e2a63cd90d41b",
+                "username": "悟空",
+                "accountName": "6gnn5yz2",
+                "accountTitle": "科大讯飞股份有限公司(校招)",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountStatus": "normal",
+                "collectToAccount": "",
+                "createTime": "2022-11-10 14:53:52",
+                "updateTime": "2022-11-10 14:53:52"
+            },
+            {
+                "id": 690,
+                "accountId": "b54a57e61aad4010b001c6124fce48ad",
+                "registerChannel": "official",
+                "registerMethod": "api",
+                "belongToTenant": "96493b227fa6b8a565dfebbb6379e6c3",
+                "username": "悟空",
+                "accountName": "iiv210og0jcj0l0i",
+                "accountTitle": "科大讯飞测试-悟空",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountStatus": "normal",
+                "collectToAccount": "",
+                "createTime": "2023-05-11 15:29:57",
+                "updateTime": "2023-05-11 15:29:57"
+            }
+        ],
+        "tenantAccount": [
+            {
+                "tenantId": "8ad6b4f9710711eca50e2a63cd90d41b",
+                "tenantName": "科大讯飞股份有限公司(校招)",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountId": "3d0ae37fb3f34c61bb66268bdf26eff7",
+                "username": null,
+                "mobile": null,
+                "email": null,
+                "roleId": "interviewer",
+                "roleName": null,
+                "standardRole": "interviewer"
+            },
+            {
+                "tenantId": "96493b227fa6b8a565dfebbb6379e6c3",
+                "tenantName": "科大讯飞测试",
+                "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+                "accountId": "b54a57e61aad4010b001c6124fce48ad",
+                "username": null,
+                "mobile": null,
+                "email": null,
+                "roleId": "interviewer",
+                "roleName": null,
+                "standardRole": "interviewer"
+            }
+        ],
+        "username": "悟空",
+        "userId": "9d5dcc56e6a44994ae0a6c2bab79751d",
+        "authType": "sms",
+        "mobile": "16000005576",
+        "token": "75a619af-f965-4e5a-949c-7f5c9011540c",
+        "loginSsoId": null,
+        "new": false
+    }
+}
+[0m
+[32m2023-05-25 20:39:16.520[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m230[0m - [1massert status_code equal 200(int)	==> pass[0m
+[32m2023-05-25 20:39:16.520[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m230[0m - [1massert body.desc equal 成功(str)	==> pass[0m
+[32m2023-05-25 20:39:16.520[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m209[0m - [1mrun step end: 登录接口 <<<<<<
+[0m
+[32m2023-05-25 20:39:16.520[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m233[0m - [1mgenerate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/c97ca6ee-20e1-4f43-a41a-43091d1ecbc2.run.log[0m

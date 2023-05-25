@@ -1,0 +1,59 @@
+[32m2023-05-25 20:36:20.253[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m222[0m - [1mStart to run testcase: 登录接口, TestCase ID: fe724e93-2755-4f81-98a0-cd9710354058[0m
+[32m2023-05-25 20:36:20.256[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m181[0m - [1mrun step begin: 登录接口 >>>>>>[0m
+[32m2023-05-25 20:36:20.256[0m | [34m[1mDEBUG   [0m | [36mhttprunner.step_request[0m:[36mrun_step_request[0m:[36m131[0m - [34m[1m====== request details ======
+url: https://zpdemo.xfsaas.cn/api/leapp/login/login-sms
+method: POST
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "Content-Type": "application/json;charset=UTF-8",
+    "god": true,
+    "HRUN-Request-ID": "HRUN-fe724e93-2755-4f81-98a0-cd9710354058-180256"
+}
+json: {
+    "loginName": "",
+    "mobile": "16000005576",
+    "password": "",
+    "smsCode": "123456"
+}
+[0m
+[32m2023-05-25 20:36:20.257[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m39[0m - [34m[1m
+================== request details ==================
+method   : POST
+url      : https://zpdemo.xfsaas.cn/api/leapp/login/login-sms
+headers  : {
+    "Content-Length": "0"
+}
+cookies  : {}
+body     : None
+[0m
+[32m2023-05-25 20:36:20.257[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m39[0m - [34m[1m
+================== response details ==================
+status_code : 0
+headers  : {}
+cookies  : {}
+encoding : None
+content_type : 
+body     : 
+[0m
+[32m2023-05-25 20:36:20.257[0m | [31m[1mERROR   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m214[0m - [31m[1mHeader part (True) from {'god': True} must be of type str or bytes, not <class 'bool'>[0m
+[32m2023-05-25 20:36:20.257[0m | [34m[1mDEBUG   [0m | [36mhttprunner.step_request[0m:[36mrun_step_request[0m:[36m151[0m - [34m[1m====== response details ======
+status_code: 0
+headers: {}
+body: None
+[0m
+[32m2023-05-25 20:36:20.258[0m | [31m[1mERROR   [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m247[0m - [31m[1massert status_code equal 200(int)	==> fail
+check_item: status_code
+check_value: 0(int)
+assert_method: equal
+expect_value: 200(int)[0m
+[32m2023-05-25 20:36:20.258[0m | [31m[1mERROR   [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m247[0m - [31m[1massert body.desc equal 成功(str)	==> fail
+check_item: body.desc
+check_value: None(NoneType)
+assert_method: equal
+expect_value: 成功(str)[0m
+[32m2023-05-25 20:36:20.258[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m233[0m - [1mgenerate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/fe724e93-2755-4f81-98a0-cd9710354058.run.log[0m

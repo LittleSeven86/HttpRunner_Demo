@@ -1,0 +1,16 @@
+====== request details ======
+url: http://www.fairytest.com/api/demand/getPageLink
+method: GET
+params: {
+    "test": "test"
+}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "Content-Type": "application/json;charset=UTF-8",
+    "HRUN-Request-ID": "HRUN-071c5a2a-aa8a-4c85-a56e-29a4b0c523d1-335089"
+}
+json: None

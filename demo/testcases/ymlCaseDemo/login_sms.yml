@@ -1,0 +1,22 @@
+config:
+    name: 登录接口
+    author: "Benjamin"
+
+teststeps:
+-
+  name: 登录接口
+  request:
+      url: ${ENV(base_url)}/api/leapp/login/login-sms
+      headers:
+          Content-Type: application/json;charset=UTF-8
+          god: 'true'
+      method: POST
+      body: {"loginName": "","mobile": "16000005576","password": "","smsCode": "123456"}
+
+  variables:
+    test: 'test'
+
+  validate:
+    - eq: ["status_code", 200]
+    - eq: ["body.desc", 成功]
+#    - eq: ["$..code", [412]]    # 断言参数提取 JsonPath方式提取参数，后续讲解

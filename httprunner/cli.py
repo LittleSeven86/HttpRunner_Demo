@@ -15,6 +15,15 @@ init_sentry_sdk()
 
 
 def init_parser_run(subparsers):
+    """
+    功能：
+    1、导入了 argparse 模块。
+    2、调用了 subparsers.add_parser() 方法，创建了一个名为 run 的子解析器。
+    3、给子解析器添加了一个帮助文本 "Make HttpRunner testcases and run with pytest."。
+    4、没有明确指定返回值，但通常情况下，解析器会返回子解析器对象。
+    :param subparsers:
+    :return:sub_parser_run
+    """
     sub_parser_run = subparsers.add_parser(
         "run", help="Make HttpRunner testcases and run with pytest."
     )
@@ -22,6 +31,11 @@ def init_parser_run(subparsers):
 
 
 def main_run(extra_args) -> enum.IntEnum:
+    """
+
+    :param extra_args:
+    :return:
+    """
     ga_client.track_event("RunAPITests", "hrun")
     # keep compatibility with v2
     extra_args = ensure_cli_args(extra_args)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Httprunner_Demo.iml" filepath="$PROJECT_DIR$/.idea/Httprunner_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HttpRunner_demo.iml" filepath="$PROJECT_DIR$/.idea/HttpRunner_demo.iml" />
     </modules>
   </component>
 </project>

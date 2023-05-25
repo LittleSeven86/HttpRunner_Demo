@@ -1,0 +1,7 @@
+2023-05-25 21:27:33.509 | INFO | run step begin: GET请求测试用例 >>>>>>
+2023-05-25 21:27:33.509 | ERROR | call function error:
+func_name: ENV
+args: ['base-url']
+kwargs: {}
+EnvNotFound: base-url
+2023-05-25 21:27:33.511 | INFO | generate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/d4c655de-41ab-45d5-a00f-2a7875a4166f.run.log

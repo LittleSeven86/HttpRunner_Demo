@@ -1,19 +1,23 @@
 config:
-    name: "yml测试用例"
-    author: "Benjamin"
+    name: "GET请求测试用例"
+    variables:
+      base_url: http://www.fairytest.com
+      test: test
+      expect_body_code: 412
+
 teststeps:
 -
-  name: yml测试用例
+  name: GET请求测试用例
+
   request:
-      headers:
-          Content-Type: application/json;charset=UTF-8
-      method: GET
-      params:
-          test: "test"
-      url: http://www.fairytest.com/api/demand/getPageLink
-  variables:
-    test: 'test'
+    url: ${base_url}/api/demand/getPageLink
+    headers:
+        Content-Type: application/json;charset=UTF-8
+    method: GET
+    params:
+        test: ${test}
+
   validate:
     - eq: ["status_code", 200]
-    - eq: ["body.code", 412]
+    - eq: ["body.code", $expect_body_code]
 #    - eq: ["$..code", [412]]    # 断言参数提取 JsonPath方式提取参数，后续讲解
