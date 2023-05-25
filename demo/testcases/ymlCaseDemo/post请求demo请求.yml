@@ -1,0 +1,20 @@
+config:
+  name: post请求测试demo
+  author: xiaoqi
+
+teststeps:
+-
+  name: 登录接口
+  request:
+    headers:
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: http://api.lemonban.com/futureloan/member/login
+    variables:
+      mobile_phone: 13300000100
+      pwd: Aa123456
+    body: {"mobile_phone": "13300000100","pwd":"Aa123456"}
+  validate:
+    - eq: ["status_code", 200]
+
+

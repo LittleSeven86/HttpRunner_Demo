@@ -1,0 +1,19 @@
+config:
+    name: "yml测试用例"
+    author: "Benjamin"
+teststeps:
+-
+  name: yml测试用例
+  request:
+      headers:
+          Content-Type: application/json;charset=UTF-8
+      method: GET
+      params:
+          test: "test"
+      url: http://www.fairytest.com/api/demand/getPageLink
+  variables:
+    test: 'test'
+  validate:
+    - eq: ["status_code", 200]
+    - eq: ["body.code", 412]
+    - eq: ["$..code", [412]]    # 断言参数提取 JsonPath方式提取参数，后续讲解
