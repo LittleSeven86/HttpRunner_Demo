@@ -6,3 +6,4 @@ cmd = sys.argv.pop(1)
 
 if cmd in ["hrp", "httprunner", "ate"]:
     main()
+

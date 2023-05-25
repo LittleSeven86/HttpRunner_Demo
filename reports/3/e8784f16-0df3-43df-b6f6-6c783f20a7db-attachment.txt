@@ -1,0 +1,10 @@
+
+
+[32m2023-05-23 16:59:34.093[0m | [1mINFO[0m | [1mStart to run testcase: yml测试用例, TestCase ID: 9d690620-d0e8-430e-b07f-be7c9aca5e4a[0m
+[32m2023-05-23 16:59:34.094[0m | [1mINFO[0m | [1mrun step begin: yml测试用例 >>>>>>[0m
+[32m2023-05-23 16:59:34.142[0m | [1mINFO[0m | [1mstatus_code: 200, response_time(ms): 44.37 ms, response_length: 0 bytes[0m
+[32m2023-05-23 16:59:34.143[0m | [1mINFO[0m | [1massert status_code equal 200(int)	==> pass[0m
+[32m2023-05-23 16:59:34.144[0m | [1mINFO[0m | [1massert body.code equal 412(int)	==> pass[0m
+[32m2023-05-23 16:59:34.144[0m | [1mINFO[0m | [1mrun step end: yml测试用例 <<<<<<
+[0m
+[32m2023-05-23 16:59:34.144[0m | [1mINFO[0m | [1mgenerate testcase log: D:\Python\Httprunner_Demo\demo\logs\9d690620-d0e8-430e-b07f-be7c9aca5e4a.run.log[0m

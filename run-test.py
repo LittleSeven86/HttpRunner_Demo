@@ -14,10 +14,11 @@ if __name__ == '__main__':
     #       ])
 
 # 可直接运行，如果想定位问题，可直接debug模式运行
-    main_run([r"D:\Python\Httprunner_Demo\demo\testcases\pytestCaseDemo",  # case路径
+    main_run([r"D:\Python\Httprunner_Demo\demo\testcases\ymlCaseDemo\post请求demo请求.yml",  # case路径
               '-v',
               # '-s',
-              '--report=hhhhhh.html',
+              # '--report=hhhhhh.html',
+              '--alluredir=reports/5'
               '--title=【酒旅-质量保障部】自动化报告',
               '--tester=【酒旅-质量保障部】',
               '--desc=报告描述信息【酒旅-质量保障部】',

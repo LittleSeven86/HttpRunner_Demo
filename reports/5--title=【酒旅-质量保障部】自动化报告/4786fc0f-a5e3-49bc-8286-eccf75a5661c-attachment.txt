@@ -1,0 +1,78 @@
+[32m2023-05-25 14:58:56.339[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m222[0m - [1mStart to run testcase: post请求测试demo, TestCase ID: 0a035f11-99ec-4749-a119-98fd8864275d[0m
+[32m2023-05-25 14:58:56.342[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m181[0m - [1mrun step begin: 登录接口 >>>>>>[0m
+[32m2023-05-25 14:58:56.343[0m | [34m[1mDEBUG   [0m | [36mhttprunner.step_request[0m:[36mrun_step_request[0m:[36m131[0m - [34m[1m====== request details ======
+url: http://api.lemonban.com/futureloan/member/login
+method: POST
+params: {}
+data: {
+    "mobile_phone": "13300000100",
+    "pwd": "Aa123456"
+}
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "HRUN-Request-ID": "HRUN-0a035f11-99ec-4749-a119-98fd8864275d-936343"
+}
+json: None
+[0m
+[32m2023-05-25 14:58:56.465[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m39[0m - [34m[1m
+================== request details ==================
+method   : POST
+url      : http://api.lemonban.com/futureloan/member/login
+headers  : {
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "HRUN-Request-ID": "HRUN-0a035f11-99ec-4749-a119-98fd8864275d-936343",
+    "Content-Length": "37",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : mobile_phone=13300000100&pwd=Aa123456
+[0m
+[32m2023-05-25 14:58:56.466[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m39[0m - [34m[1m
+================== response details ==================
+status_code : 200
+headers  : {
+    "Connection": "close",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Thu, 25 May 2023 06:58:56 GMT",
+    "Server": "nginx/1.9.9"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "code": 1005,
+    "msg": "Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported",
+    "data": null,
+    "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+[0m
+[32m2023-05-25 14:58:56.466[0m | [1mINFO    [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m216[0m - [1mstatus_code: 200, response_time(ms): 118.86 ms, response_length: 0 bytes[0m
+[32m2023-05-25 14:58:56.467[0m | [34m[1mDEBUG   [0m | [36mhttprunner.step_request[0m:[36mrun_step_request[0m:[36m151[0m - [34m[1m====== response details ======
+status_code: 200
+headers: {
+    "Connection": "close",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Thu, 25 May 2023 06:58:56 GMT",
+    "Server": "nginx/1.9.9"
+}
+body: {
+    "code": 1005,
+    "msg": "Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported",
+    "data": null,
+    "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+[0m
+[32m2023-05-25 14:58:56.467[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m230[0m - [1massert status_code equal 200(int)	==> pass[0m
+[32m2023-05-25 14:58:56.468[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m209[0m - [1mrun step end: 登录接口 <<<<<<
+[0m
+[32m2023-05-25 14:58:56.468[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m233[0m - [1mgenerate testcase log: D:\Python\Httprunner_Demo\demo\logs\0a035f11-99ec-4749-a119-98fd8864275d.run.log[0m
