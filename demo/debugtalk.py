@@ -60,3 +60,15 @@ def setup_hook_example(name):
 def teardown_hook_example(name):
     logging.warning("teardown_hook_example")
     return f"teardown_hook_example: {name}"
+
+def get_mobilephone_pwd(a,b):
+    list = []
+    for num in range(a,b):
+        info=['133000000'+str(num),'Aa123456']
+        list.append(info)
+    return list
+
+if __name__ == '__main__':
+    print(get_mobilephone_pwd(97,100))
+
+

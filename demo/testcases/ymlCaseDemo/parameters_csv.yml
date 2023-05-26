@@ -2,10 +2,16 @@ config:
   name: post请求测试demo
   author: xiaoqi
   parameters:
-    mobile_phone-pwd: [['13300000097','Aa123456'],['13300000098','Aa123456']]
-#  parameters_setting:
-#    pick_order: "random"
-#    limit: 1
+    mobile_phone-pwd: ${get_mobilephone_pwd(96,100)}
+
+  parameters_setting:
+    strategies:
+      mobile_phone-pwd:
+        pick_order: "random"
+    limit: 3
+
+  variables:
+    file: case_file/Lemon_mobile.csv
 
 
 teststeps:
