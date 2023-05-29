@@ -1,0 +1,34 @@
+config:
+  name: post请求测试demo
+  author: xiaoqi
+  parameters:
+    mobile_phone: ['133000000102','133000000103','133000000104']
+    pwd: ['Aa123456']
+  variables:
+    base_url: http://api.lemonban.com
+
+
+teststeps:
+-
+  name: 注册接口
+  request:
+    headers:
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: $base_url/futureloan/member/register
+    body: {"mobile_phone": $mobile_phone,"pwd":$pwd}
+  validate:
+    - eq: ["status_code", 200]
+  extract:
+    code: body.code
+
+-
+  name: 登录接口
+  request:
+    headers:
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: http://api.lemonban.com/futureloan/member/login
+    body: {"mobile_phone": $mobile_phone,"pwd":$pwd,"code":$code}
+  validate:
+    - eq: ["status_code", 200]

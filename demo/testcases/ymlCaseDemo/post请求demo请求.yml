@@ -3,9 +3,9 @@ config:
   author: xiaoqi
   parameters:
     mobile_phone-pwd: [['13300000097','Aa123456'],['13300000098','Aa123456']]
-#  parameters_setting:
-#    pick_order: "random"
-#    limit: 1
+  parameters_setting:
+    pick_order: "random"
+    limit: 1
 
 
 teststeps:

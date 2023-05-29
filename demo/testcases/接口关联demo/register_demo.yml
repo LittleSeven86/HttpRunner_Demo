@@ -1,0 +1,19 @@
+config:
+  name: 注册接口
+  base_url: ${ENV(base_url)}
+  export:
+    - code
+
+teststeps:
+-
+  name: 注册接口
+  request:
+    headers:
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: /member/register
+    body: {"mobile_phone": $mobile_phone,"pwd":$pwd}
+  extract:
+    code: body.code
+  validate:
+    - eq: ["status_code", 200]

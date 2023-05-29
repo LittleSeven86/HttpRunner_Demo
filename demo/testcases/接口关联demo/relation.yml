@@ -1,0 +1,13 @@
+config:
+  name: 关联测试用例
+  base_url: ${ENV(base_url)}
+  parameters:
+    mobile_phone-pwd: ${P(csv_data/mobile_phone-pwd.csv)}
+
+teststeps:
+-
+  name: 注册接口
+  testcase: testcases/接口关联demo/register_demo.yml
+-
+  name: 登录接口
+  testcase: testcases/接口关联demo/login_demo.yml

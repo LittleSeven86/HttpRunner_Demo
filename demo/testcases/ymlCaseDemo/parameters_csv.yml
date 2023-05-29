@@ -2,13 +2,19 @@ config:
   name: post请求测试demo
   author: xiaoqi
   parameters:
-    mobile_phone-pwd: ${get_mobilephone_pwd(96,100)}
-
+    mobile_phone: ['133000000096','133000000097','133000000098']
+    pwd: ['Aa123456','','A']
   parameters_setting:
-    strategies:
-      mobile_phone-pwd:
-        pick_order: "random"
-    limit: 3
+    pick_order: 1
+    limit: 6
+#    strategies:
+#      mobile_phone:
+#        name: "user_mobile_phone"
+#        pick_order: "random"
+#      pwd:
+#        name: "user_pwd"
+#        pick_order: "sequential"
+
 
   variables:
     file: case_file/Lemon_mobile.csv

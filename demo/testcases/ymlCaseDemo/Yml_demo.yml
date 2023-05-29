@@ -1,23 +1,22 @@
 config:
-    name: "GET请求测试用例"
-    variables:
-      base_url: http://www.fairytest.com
-      test: test
-      expect_body_code: 412
+  name: "请求测试用例"
+  base_url: ${ENV(base_url)}
+  variables:
+    mobile_phone: 13300000096
+    pwd: Aa123456
+
 
 teststeps:
 -
-  name: GET请求测试用例
-
+  name: 登录接口
+  variables:
+    mobile_phone: 13300000097
+    pwd: Aa123457
   request:
-    url: ${base_url}/api/demand/getPageLink
     headers:
-        Content-Type: application/json;charset=UTF-8
-    method: GET
-    params:
-        test: ${test}
-
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: /member/login
+    body: { "mobile_phone": $mobile_phone,"pwd":$pwd}
   validate:
-    - eq: ["status_code", 200]
-    - eq: ["body.code", $expect_body_code]
-#    - eq: ["$..code", [412]]    # 断言参数提取 JsonPath方式提取参数，后续讲解
+    - eq: [ "status_code", 200 ]

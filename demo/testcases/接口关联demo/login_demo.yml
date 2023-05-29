@@ -1,0 +1,15 @@
+config:
+  name: 登陆接口
+  base_url: ${ENV(base_url)}
+
+teststeps:
+-
+  name: 登录接口
+  request:
+    headers:
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: /member/login
+    body: {"mobile_phone": $mobile_phone,"pwd":$pwd,"code":$code}
+  validate:
+    - eq: ["status_code", 200]
