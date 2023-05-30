@@ -11,12 +11,18 @@ class TestCaseLoginDemo(HttpRunner):
         Step(
             RunRequest("登录接口")
             .post("/member/login")
-            .with_headers(**{"X-Lemonban-Media-Type": "lemonban.v2"})
-            .with_data(
+            .with_headers(
+                **{
+                    "Content-Type": "application/json",
+                    "X-Lemonban-Media-Type": "lemonban.v2",
+                }
+            )
+            .with_json(
                 {"mobile_phone": "$mobile_phone", "pwd": "$pwd", "code": "$code"}
             )
             .validate()
             .assert_equal("status_code", 200)
+            .assert_equal("body.msg", "OK")
         ),
     ]
 

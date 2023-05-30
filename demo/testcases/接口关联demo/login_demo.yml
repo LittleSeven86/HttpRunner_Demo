@@ -7,9 +7,11 @@ teststeps:
   name: 登录接口
   request:
     headers:
+      Content-Type: application/json
       X-Lemonban-Media-Type: lemonban.v2
     method: POST
     url: /member/login
     body: {"mobile_phone": $mobile_phone,"pwd":$pwd,"code":$code}
   validate:
     - eq: ["status_code", 200]
+    - eq: ['body.msg','OK']

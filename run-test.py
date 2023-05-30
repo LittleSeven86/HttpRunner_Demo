@@ -17,7 +17,7 @@ if __name__ == '__main__':
     #       ])
 
 # 可直接运行，如果想定位问题，可直接debug模式运行
-    main_run([r"/Users/z.m/pythonProject/HttpRunner_demo/demo/testcases/ymlCaseDemo/Yml_demo.yml",  # case路径
+    main_run([r"/Users/z.m/pythonProject/HttpRunner_demo/demo/testcases/hook_demo/hook_demo.yml",  # case路径
               '-v',
               # '-s',
               # '--report=hhhhhh.html',

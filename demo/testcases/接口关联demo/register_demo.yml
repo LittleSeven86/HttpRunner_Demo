@@ -9,6 +9,7 @@ teststeps:
   name: 注册接口
   request:
     headers:
+      Content-Type: application/json
       X-Lemonban-Media-Type: lemonban.v2
     method: POST
     url: /member/register
@@ -17,3 +18,4 @@ teststeps:
     code: body.code
   validate:
     - eq: ["status_code", 200]
+    - eq: ['body.msg','账号已存在']

@@ -68,6 +68,25 @@ def get_mobilephone_pwd(a,b):
         list.append(info)
     return list
 
+def hook_print(msg):
+    print(msg)
+
+
+def setup_hook_add_kwargs(request):
+    request["key"] = "value"
+
+
+def setup_hook_remove_kwargs(request):
+    request.pop("key")
+
+
+def teardown_hook_sleep_N_secs(response, n_secs):
+    """sleep n seconds after request"""
+    if response.status_code == 200:
+        time.sleep(0.1)
+    else:
+        time.sleep(n_secs)
+
 if __name__ == '__main__':
     print(get_mobilephone_pwd(97,100))
 

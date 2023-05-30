@@ -1,0 +1,30 @@
+config:
+  name: 关联测试用例
+  base_url: ${ENV(base_url)}
+  parameters:
+    mobile_phone-pwd: ${P(csv_data/mobile_phone-pwd.csv)}
+  setup_hooks:
+    - ${hook_print('这是全局级别的夹具setup')}
+  teardown_hooks:
+    - ${hook_print('这是全局级别的夹具teardown')}
+
+teststeps:
+-
+  name: 注册接口
+  setup_hooks:
+    - ${hook_print('这是函数级别测试夹具--1')}
+    - ${setup_hook_add_kwargs($request)}
+  request:
+    headers:
+      Content-Type: application/json
+      X-Lemonban-Media-Type: lemonban.v2
+    method: POST
+    url: /member/register
+    body: {"mobile_phone": $mobile_phone,"pwd":$pwd}
+  teardown_hooks:
+    - ${hook_print('这是函数级别测试夹具--2')}
+  extract:
+    code: body.code
+  validate:
+    - eq: ["status_code", 200]
+    - eq: ['body.msg','账号已存在']

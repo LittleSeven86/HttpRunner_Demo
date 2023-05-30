@@ -8,6 +8,8 @@ teststeps:
 -
   name: 注册接口
   testcase: testcases/接口关联demo/register_demo.yml
+
+
 -
   name: 登录接口
   testcase: testcases/接口关联demo/login_demo.yml
