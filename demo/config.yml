@@ -1,0 +1,6 @@
+# 数据库相关配置
+sql_db:
+  host: api.lemonban.com
+  user: future
+  password: "123456"
+  database: future

@@ -1,0 +1,83 @@
+2023-06-11 22:24:59.744 | INFO | run step begin: 登录接口 >>>>>>
+2023-06-11 22:24:59.744 | INFO | call hook actions: setup request
+2023-06-11 22:24:59.744 | DEBUG | call hook function: ${connect_database('demo/config.yml',$sql)}
+2023-06-11 22:24:59.744 | DEBUG | ====== request details ======
+url: http://api.lemonban.com/futureloan/member/login
+method: POST
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "Content-Type": "application/json",
+    "HRUN-Request-ID": "HRUN-79c7fd4c-d931-4250-9912-15c9a63e4dfc-499744"
+}
+json: {
+    "mobile_phone": 13300000097,
+    "pwd": "Aa123457"
+}
+
+2023-06-11 22:25:00.038 | DEBUG | 
+================== request details ==================
+method   : POST
+url      : http://api.lemonban.com/futureloan/member/login
+headers  : {
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "Content-Type": "application/json",
+    "HRUN-Request-ID": "HRUN-79c7fd4c-d931-4250-9912-15c9a63e4dfc-499744",
+    "Content-Length": "48"
+}
+cookies  : {}
+body     : {
+    "mobile_phone": 13300000097,
+    "pwd": "Aa123457"
+}
+
+2023-06-11 22:25:00.038 | DEBUG | 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Connection": "close",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Sun, 11 Jun 2023 14:25:00 GMT",
+    "Server": "nginx/1.9.9"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "code": 1001,
+    "msg": "账号信息错误",
+    "data": null,
+    "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+
+2023-06-11 22:25:00.038 | INFO | status_code: 200, response_time(ms): 293.0 ms, response_length: 0 bytes
+2023-06-11 22:25:00.039 | DEBUG | ====== response details ======
+status_code: 200
+headers: {
+    "Connection": "close",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Sun, 11 Jun 2023 14:25:00 GMT",
+    "Server": "nginx/1.9.9"
+}
+body: {
+    "code": 1001,
+    "msg": "账号信息错误",
+    "data": null,
+    "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+
+2023-06-11 22:25:00.039 | INFO | assert status_code equal 200(int)	==> pass
+2023-06-11 22:25:00.040 | INFO | run step end: 登录接口 <<<<<<
+
+2023-06-11 22:25:00.040 | INFO | generate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/79c7fd4c-d931-4250-9912-15c9a63e4dfc.run.log

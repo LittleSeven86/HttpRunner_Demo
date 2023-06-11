@@ -1,0 +1,15 @@
+====== response details ======
+status_code: 200
+headers: {
+    "Connection": "close",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Sun, 11 Jun 2023 14:25:00 GMT",
+    "Server": "nginx/1.9.9"
+}
+body: {
+    "code": 1001,
+    "msg": "账号信息错误",
+    "data": null,
+    "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}

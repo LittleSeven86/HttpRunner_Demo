@@ -1,3 +1,0 @@
-[32m2023-05-25 21:12:06.790[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m222[0m - [1mStart to run testcase: GET请求测试用例, TestCase ID: c4d2e872-7b67-400f-91b9-40356feed06f[0m
-[32m2023-05-25 21:12:06.793[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m181[0m - [1mrun step begin: GET请求测试用例 >>>>>>[0m
-[32m2023-05-25 21:12:06.794[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m233[0m - [1mgenerate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/c4d2e872-7b67-400f-91b9-40356feed06f.run.log[0m

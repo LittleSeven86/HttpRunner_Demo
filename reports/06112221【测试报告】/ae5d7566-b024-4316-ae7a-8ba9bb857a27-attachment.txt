@@ -1,0 +1,17 @@
+====== request details ======
+url: http://api.lemonban.com/futureloan/member/login
+method: POST
+params: {}
+data: {
+    "mobile_phone": 13300000097,
+    "pwd": "Aa123457"
+}
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "HRUN-Request-ID": "HRUN-0ffa3ebf-9cc2-4470-af49-d4dae21db7c0-317650"
+}
+json: None

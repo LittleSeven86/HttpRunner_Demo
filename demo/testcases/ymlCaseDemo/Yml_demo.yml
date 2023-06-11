@@ -4,17 +4,21 @@ config:
   variables:
     mobile_phone: 13300000096
     pwd: Aa123456
+    sql: SELECT COUNT(*) FROM member WHERE mobile_phone = "13300000100"
 
 
 teststeps:
 -
   name: 登录接口
+  setup_hooks:
+    - ${connect_database('demo/config.yml',$sql)}
   variables:
-    mobile_phone: 13300000097
-    pwd: Aa123457
+    mobile_phone: 13300000100
+    pwd: Aa123456
   request:
     headers:
       X-Lemonban-Media-Type: lemonban.v2
+      Content-Type: application/json
     method: POST
     url: /member/login
     body: { "mobile_phone": $mobile_phone,"pwd":$pwd}

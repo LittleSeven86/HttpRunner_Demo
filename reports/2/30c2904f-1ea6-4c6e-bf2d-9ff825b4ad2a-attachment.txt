@@ -1,2 +1,0 @@
-2023-05-25 20:35:35.661 | INFO | run step begin: 登录接口 >>>>>>
-2023-05-25 20:35:35.662 | INFO | generate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/128f61d6-0094-4803-91cb-8bc661eb118f.run.log

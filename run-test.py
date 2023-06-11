@@ -38,7 +38,7 @@ def run_with_allure_report(case_path):
 
 if __name__ == '__main__':
     # 使用allure测试报告
-    # run_with_allure_report(r"D:\Python\Httprunner_Demo\demo\testcases\hook_demo\hook_demo.yml")
+    run_with_allure_report(r"/Users/z.m/pythonProject/HttpRunner_demo/demo/testcases/ymlCaseDemo/Yml_demo.yml")
 
     # 使用lemon测试报告
-    run_with_lemon_report(r"D:\Python\Httprunner_Demo\demo\testcases\hook_demo\hook_demo.yml","test1","xiaoqi","11",2)
+    # run_with_lemon_report(r"D:\Python\Httprunner_Demo\demo\testcases\hook_demo\hook_demo.yml","test1","xiaoqi","11",2)

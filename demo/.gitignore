@@ -7,7 +7,7 @@ output/
 __pycache__/
 *.pyc
 .python-version
-logs/
+logs/*
 
 # plugin
 debugtalk.bin

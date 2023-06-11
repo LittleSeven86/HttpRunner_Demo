@@ -1,0 +1,67 @@
+2023-06-11 22:23:55.584 | INFO | run step begin: 登录接口 >>>>>>
+2023-06-11 22:23:55.585 | INFO | call hook actions: setup request
+2023-06-11 22:23:55.585 | DEBUG | call hook function: ${connect_database('demo/config.yml',$sql)}
+2023-06-11 22:23:55.585 | DEBUG | ====== request details ======
+url: http://api.lemonban.com/futureloan/member/login
+method: POST
+params: {}
+data: {
+    "mobile_phone": 13300000097,
+    "pwd": "Aa123457"
+}
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "Content type": "application/x-www-form-urlencoded",
+    "HRUN-Request-ID": "HRUN-c533b242-430e-4916-a049-2c088ac6c04e-435585"
+}
+json: None
+
+2023-06-11 22:23:55.629 | DEBUG | 
+================== request details ==================
+method   : POST
+url      : http://api.lemonban.com/futureloan/member/login
+headers  : {
+    "User-Agent": "python-requests/2.28.1",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "X-Lemonban-Media-Type": "lemonban.v2",
+    "Content type": "application/x-www-form-urlencoded",
+    "HRUN-Request-ID": "HRUN-c533b242-430e-4916-a049-2c088ac6c04e-435585",
+    "Content-Length": "37",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : mobile_phone=13300000097&pwd=Aa123457
+
+2023-06-11 22:23:55.630 | DEBUG | 
+================== response details ==================
+status_code : 502
+headers  : {
+    "Connection": "close",
+    "Content-Length": "0"
+}
+cookies  : {}
+encoding : None
+content_type : 
+body     : 
+
+2023-06-11 22:23:55.630 | ERROR | 502 Server Error: Bad Gateway for url: http://api.lemonban.com/futureloan/member/login
+2023-06-11 22:23:55.630 | DEBUG | ====== response details ======
+status_code: 502
+headers: {
+    "Connection": "close",
+    "Content-Length": "0"
+}
+body: b''
+
+2023-06-11 22:23:55.630 | ERROR | assert status_code equal 200(int)	==> fail
+check_item: status_code
+check_value: 502(int)
+assert_method: equal
+expect_value: 200(int)
+2023-06-11 22:23:55.631 | INFO | generate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/c533b242-430e-4916-a049-2c088ac6c04e.run.log

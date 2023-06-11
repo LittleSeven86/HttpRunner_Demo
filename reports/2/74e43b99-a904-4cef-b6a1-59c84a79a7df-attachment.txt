@@ -1,4 +1,0 @@
-====== response details ======
-status_code: 0
-headers: {}
-body: None

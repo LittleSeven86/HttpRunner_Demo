@@ -1,8 +1,0 @@
-[32m2023-05-25 21:27:33.507[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m222[0m - [1mStart to run testcase: GET请求测试用例, TestCase ID: d4c655de-41ab-45d5-a00f-2a7875a4166f[0m
-[32m2023-05-25 21:27:33.509[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m181[0m - [1mrun step begin: GET请求测试用例 >>>>>>[0m
-[32m2023-05-25 21:27:33.509[0m | [31m[1mERROR   [0m | [36mhttprunner.parser[0m:[36mparse_string[0m:[36m352[0m - [31m[1mcall function error:
-func_name: ENV
-args: ['base-url']
-kwargs: {}
-EnvNotFound: base-url[0m
-[32m2023-05-25 21:27:33.511[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m233[0m - [1mgenerate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/d4c655de-41ab-45d5-a00f-2a7875a4166f.run.log[0m
