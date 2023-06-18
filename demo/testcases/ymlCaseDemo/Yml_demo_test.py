@@ -22,6 +22,7 @@ class TestCaseYmlDemo(HttpRunner):
             RunRequest("登录接口")
             .with_variables(**{"mobile_phone": 13300000100, "pwd": "Aa123456"})
             .setup_hook("${connect_database('demo/config.yml',$sql)}")
+            .setup_hook("${hook_print(hello)}")
             .post("/member/login")
             .with_headers(
                 **{

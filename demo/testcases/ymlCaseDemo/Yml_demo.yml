@@ -12,6 +12,7 @@ teststeps:
   name: 登录接口
   setup_hooks:
     - ${connect_database('demo/config.yml',$sql)}
+    - ${hook_print(hello)}
   variables:
     mobile_phone: 13300000100
     pwd: Aa123456
@@ -24,3 +25,4 @@ teststeps:
     body: { "mobile_phone": $mobile_phone,"pwd":$pwd}
   validate:
     - eq: [ "status_code", 200 ]
+    - eq: [connect_database('demo/config.yml',$sql)]

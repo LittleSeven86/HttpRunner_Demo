@@ -1,0 +1,5 @@
+2023-06-11 22:56:17.213 | INFO | run step begin: 登录接口 >>>>>>
+2023-06-11 22:56:17.215 | INFO | call hook actions: setup request
+2023-06-11 22:56:17.215 | DEBUG | call hook function: ${connect_database('demo/config.yml',$sql)}
+2023-06-11 22:56:17.215 | DEBUG | call hook function: ${hook_print(hello)}
+2023-06-11 22:56:39.814 | INFO | generate testcase log: /Users/z.m/pythonProject/HttpRunner_demo/demo/logs/108a76ab-4a7a-411f-8170-6163217acd3e.run.log

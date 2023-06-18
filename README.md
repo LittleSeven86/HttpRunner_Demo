@@ -1,25 +1,3 @@
-<a name="qCd2q"></a>
-# httpruner版本坑
-1. 在安装httprunner的时候，因为一开始安装的是2.5.7，随后在启动Django项目时，抛出异常，异常信息如下
-```python
-原先使用命令
-pip install httprunner==2.5.7
-```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1678527953149-d5ec0a96-1fc9-44ce-8867-0c31b41cdc61.png#averageHue=%233c4146&clientId=ua7be7d47-922c-4&from=paste&height=622&id=u76bea93e&originHeight=1660&originWidth=2080&originalType=binary&ratio=1&rotation=0&showTitle=false&size=507086&status=done&style=none&taskId=u74583d09-f9b5-4fc1-b745-3535c88244a&title=&width=779)
-
-2. 在此疯狂吐槽一下，版本不规范，调试两行泪，后续解决方案就是使用最新版本的httprunner框架
-```python
-修复使用安装的命令
-pip install httprunner
-```
-
-3. 修复后启动截图
-
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1678533687095-38066d6e-0995-4fd2-ad26-48f873333461.png#averageHue=%233c4246&clientId=ua7be7d47-922c-4&from=paste&height=652&id=u23296ba8&originHeight=1456&originWidth=1964&originalType=binary&ratio=1&rotation=0&showTitle=false&size=237065&status=done&style=none&taskId=ue029d478-1ad0-4fde-9947-f313378028e&title=&width=879)
-<a name="goMzk"></a>
-# HttpRunner框架特点
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1684764009666-0c8376e5-d320-497a-aabd-1b8f14d8b00e.png#averageHue=%23f7f7f7&clientId=u9adb9089-ee3d-4&from=paste&height=843&id=kTWtN&originHeight=843&originWidth=1785&originalType=binary&ratio=1&rotation=0&showTitle=false&size=54755&status=done&style=none&taskId=ufc864d8c-5bcc-47c4-a471-fb9a86de869&title=&width=1785)
-<a name="LXpsl"></a>
 # 官方文档
 **官方文档地址：**[**https://httprunner.com/**](https://httprunner.com/)<br />这次使用的版本是V4.x，其中是因为V2.x与现有项目版本库存在一些兼容性问题，V3.xbug比较多，所以使用V4.3版本<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1685342340925-300b530c-48f0-4e06-8eb7-27164d543f69.png#averageHue=%2341414e&clientId=ud3816294-ecfe-4&from=paste&height=590&id=u5d408d08&originHeight=737&originWidth=1897&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=140947&status=done&style=none&taskId=u5ebc6be9-261c-4ed0-a481-39b346b3d67&title=&width=1517.6)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1678544578603-d7388a86-f65f-4efb-a0c5-b7ee4cf8d401.png#averageHue=%23f1f9f6&clientId=u714e62cf-4662-4&from=paste&height=515&id=uc4e44ad4&originHeight=1316&originWidth=3138&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1291735&status=done&style=none&taskId=ufa514ad3-6942-464a-b8a6-80f8286c00d&title=&width=1227)
 <a name="nQmq0"></a>
