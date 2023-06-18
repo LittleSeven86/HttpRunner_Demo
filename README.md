@@ -1,13 +1,11 @@
 # 官方文档
-**官方文档地址：**[**https://httprunner.com/**](https://httprunner.com/)<br />这次使用的版本是V4.x，其中是因为V2.x与现有项目版本库存在一些兼容性问题，V3.xbug比较多，所以使用V4.3版本<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1685342340925-300b530c-48f0-4e06-8eb7-27164d543f69.png#averageHue=%2341414e&clientId=ud3816294-ecfe-4&from=paste&height=590&id=u5d408d08&originHeight=737&originWidth=1897&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=140947&status=done&style=none&taskId=u5ebc6be9-261c-4ed0-a481-39b346b3d67&title=&width=1517.6)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/32625797/1678544578603-d7388a86-f65f-4efb-a0c5-b7ee4cf8d401.png#averageHue=%23f1f9f6&clientId=u714e62cf-4662-4&from=paste&height=515&id=uc4e44ad4&originHeight=1316&originWidth=3138&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1291735&status=done&style=none&taskId=ufa514ad3-6942-464a-b8a6-80f8286c00d&title=&width=1227)
-<a name="nQmq0"></a>
 ## 设计理念
 
 - 约定大于配置:测试用例是标准结构化的，格式统一，方便协作和维护标准开放: 
 - 基于开放的标准，支持与 HAR/Postman/Swagger/Curl/JMeter 等工具对接，轻松实现用例生成和转换次投入多维复用:
 - 一套脚本可同时支持接口自动化测试、性能测试、数字体验监测等多种 API 测试需求融入最佳工程实践:
 - 不仅仅是一款测试工具，在功能中融入最佳工程实践，实现面向网络协议的一站式测试解决方案
-<a name="t3VBi"></a>
+
 ## 核心特征
 
 - 网络协议：完整支持 HTTP(S)/1.1 和 HTTP/2，可扩展支持 WebSocket/TCP/RPC 等更多协议
@@ -19,10 +17,10 @@
 - 性能测试：无需额外工作即可实现压力测试；单机可轻松支撑 1w+ VUM，结合分布式负载能力可实现海量发压
 - 网络性能采集：在场景化接口测试的基础上，可额外采集网络链路性能指标（DNS 解析、TCP 连接、SSL 握手、网络传输等）
 - 一键部署：采用二进制命令行工具分发，无需环境依赖，一条命令即可在 macOS/Linux/Windows 快速完成安装部署
-<a name="Agk9i"></a>
+
 ## 前言
 HttpRunner4 历经近5年的迭代已经进入到4.0版本，简短的概括HR2用例执行是unitest，HR4采用pvtest执行，yml格式用例执行时会解析为"`xx_test.py`"文件最终通过HR框架封装的方法解析为pytest可执行的用例，同时也原生支持pytest用例编写时更加灵活，在用例编写和断言方面更加便捷
-<a name="bJKg3"></a>
+
 ## V4和历史版本对比
 | 版本 | v1 | v2 | v3 | HttpRunner+ | v4 |
 | --- | --- | --- | --- | --- | --- |
@@ -48,7 +46,7 @@ HttpRunner4 历经近5年的迭代已经进入到4.0版本，简短的概括HR2�
 | 安装部署方式 | pip | pip | pip | curl/wget | curl/wget |
 
 注：v4 中 _斜体_ 代表当前还未支持，但计划会实现。<br />从上面的表格可以看出，HttpRunner v4 颇有点**金刚葫芦娃**的意思，囊括了之前所有版本的功能，并且增加了很多新特性。
-<a name="lxvtJ"></a>
+
 ## v4 版本的 Go & Python 功能对比
 HttpRunner v4.0 同时采用了 Golang/Python 两种编程语言，底层会有两套相对独立的执行引擎，目标是兼具 Golang 的高性能和 pytest 的丰富生态。<br />关键差异点对比如下：
 
