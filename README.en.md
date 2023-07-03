@@ -8,54 +8,61 @@
 [![pyversions](https://img.shields.io/pypi/pyversions/httprunner.svg)](https://pypi.python.org/pypi/httprunner)
 [![TesterHome](https://img.shields.io/badge/TTF-TesterHome-2955C5.svg)](https://testerhome.com/github_statistics)
 
-`HttpRunner` 是一个开源的 API 测试工具，支持 HTTP(S)/HTTP2/WebSocket/RPC 等网络协议，涵盖接口测试、性能测试、数字体验监测等测试类型。简单易用，功能强大，具有丰富的插件化机制和高度的可扩展能力。
+`HttpRunner` is an open source API testing tool that supports HTTP(S)/HTTP2/WebSocket/RPC network protocols, covering API testing, performance testing and digital experience monitoring (DEM) test types. Simple and easy to use, powerful, with rich plug-in mechanism and high scalability.
 
 > HttpRunner [用户调研问卷][survey] 持续收集中，我们将基于用户反馈动态调整产品特性和需求优先级。
 
 ![flow chart](https://httprunner.com/image/hrp-flow.jpg)
 
-[版本发布日志] | [English]
+[CHANGELOG] | [中文]
 
-## 设计理念
+## Key Features
 
-相比于其它 API 测试工具，HttpRunner 最大的不同在于设计理念。
+### API Testing
 
-- 约定大于配置：测试用例是标准结构化的，格式统一，方便协作和维护
-- 标准开放：基于开放的标准，支持与 [HAR]/Postman/Swagger/Curl/JMeter 等工具对接，轻松实现用例生成和转换
-- 一次投入多维复用：一套脚本可同时支持接口自动化测试、性能测试、数字体验监测等多种 API 测试需求
-- 融入最佳工程实践：不仅仅是一款测试工具，在功能中融入最佳工程实践，实现面向网络协议的一站式测试解决方案
+- [x] Full support for HTTP(S)/1.1 and HTTP/2 requests.
+- [ ] Support more protocols, WebSocket, TCP, RPC etc.
+- [x] Testcases can be described in multiple formats, `YAML`/`JSON`/`Golang`, and they are interchangeable.
+- [x] Use Charles/Fiddler/Chrome/etc to record HTTP requests and generate testcases from exported [`HAR`][HAR].
+- [x] Supports `variables`/`extract`/`validate`/`hooks` mechanisms to create extremely complex test scenarios.
+- [x] Data driven with `parameterize` mechanism, supporting sequential/random/unique strategies to select data.
+- [ ] Built-in 100+ commonly used functions for ease, including md5sum, max/min, sleep, gen_random_string etc.
+- [x] Create and call custom functions with `plugin` mechanism, support [hashicorp plugin] and [go plugin].
+- [x] Generate html reports with rich test results.
+- [x] Using it as a `CLI tool` or a `library` are both supported.
 
-## 核心特性
+### Load Testing
 
-- 网络协议：完整支持 HTTP(S)/HTTP2/WebSocket，可扩展支持 TCP/UDP/RPC 等更多协议
-- 多格式可选：测试用例支持 YAML/JSON/go test/pytest 格式，并且支持格式互相转换
-- 双执行引擎：同时支持 golang/python 两个执行引擎，兼具 go 的高性能和 [pytest] 的丰富生态
-- 录制 & 生成：可使用 [HAR]/Postman/Swagger/curl 等生成测试用例；基于链式调用的方法提示也可快速编写测试用例
-- 复杂场景：基于 variables/extract/validate/hooks 机制可以方便地创建任意复杂的测试场景
-- 插件化机制：内置丰富的函数库，同时可以基于主流编程语言（go/python/java）编写自定义函数轻松实现更多能力
-- 性能测试：无需额外工作即可实现压力测试；单机可轻松支撑 `1w+` VUM，结合分布式负载能力可实现海量发压
-- 网络性能采集：在场景化接口测试的基础上，可额外采集网络链路性能指标（DNS 解析、TCP 连接、SSL 握手、网络传输等）
-- 一键部署：采用二进制命令行工具分发，无需环境依赖，一条命令即可在 macOS/Linux/Windows 快速完成安装部署
+Base on the API testing testcases, you can run professional load testing without extra work.
 
-## 用户声音
+- [x] Inherit all powerful features of [`locust`][locust] and [`boomer`][boomer].
+- [x] Report performance metrics to [prometheus pushgateway][pushgateway].
+- [x] Use `transaction` to define a set of end-user actions that represent the real user activities.
+- [x] Use `rendezvous` points to force Vusers to perform tasks concurrently during test execution.
+- [x] Load testing with specified concurrent users or constant RPS, also supports spawn rate.
+- [ ] Support mixed-scenario testing with custom weight.
+- [ ] Simulate browser's HTTP parallel connections.
+- [ ] IP spoofing.
+- [ ] Run in distributed mode to generate unlimited RPS.
 
-基于 252 份调研问卷的统计结果，HttpRunner 用户的整体满意度评分 `4.3/5`，最喜欢的特性包括：
+### Digital Experience Monitoring (DEM)
 
-- 简单易用：测试用例支持 YAML/JSON 标准化格式，可通过录制的方式快速生成用例，上手简单，使用方便
-- 功能强大：支持灵活的自定义函数和 hook 机制，参数变量、数据驱动、结果断言等机制一应俱全，轻松适应各种复杂场景
-- 设计理念：测试用例组织支持分层设计，格式统一，易于实现测试用例的维护和复用
+You can also monitor online services for digital experience assessments.
 
-更多内容详见 [HttpRunner 首轮用户调研报告（2022.02）][user-survey-report]
+- [ ] HTTP(S) latency statistics including DNSLookup, TCP connections, SSL handshakes, content transfers, etc.
+- [ ] `ping` indicators including latency, throughput and packets loss.
+- [ ] traceroute
+- [ ] DNS monitoring
 
-## 一键部署
+## Install
 
-HttpRunner 二进制命令行工具已上传至阿里云 OSS，在系统终端中执行如下命令可完成安装部署。
+You can install HttpRunner via one curl command.
 
 ```bash
 $ bash -c "$(curl -ksSL https://httprunner.com/script/install.sh)"
 ```
 
-安装成功后，你将获得一个 `hrp` 命令行工具，执行 `hrp -h` 即可查看到参数帮助说明。
+Then you will get a `hrp` CLI tool.
 
 ```text
 $ hrp -h
@@ -102,15 +109,14 @@ Flags:
 Use "hrp [command] --help" for more information about a command.
 ```
 
-## 用户案例
+## User Cases
 
 <a href="https://httprunner.com/docs/cases/dji-ibg"><img src="https://httprunner.com/image/logo/dji.jpeg" title="大疆 - 基于 HttpRunner 构建完整的自动化测试体系" width="60"></a>
 <a href="https://httprunner.com/docs/cases/youmi"><img src="https://httprunner.com/image/logo/youmi.png" title="有米科技 - 基于 HttpRunner 建设自动化测试平台" width="60"></a>
 <a href="https://httprunner.com/docs/cases/umcare"><img src="https://httprunner.com/image/logo/umcare.png" title="通用环球医疗 - 使用 HttpRunner 实践接口自动化测试" width="100"></a>
 <a href="https://httprunner.com/docs/cases/mihoyo"><img src="https://httprunner.com/image/logo/miHoYo.png" title="米哈游 - 基于 HttpRunner 搭建接口自动化测试体系" width="100"></a>
 
-
-## 赞助商
+## Sponsor
 
 [<img src="https://testing-studio.com/img/icon.png" alt="霍格沃兹测试开发学社" width="500">](https://qrcode.testing-studio.com/f?from=HttpRunner&url=https://testing-studio.com/)
 
@@ -127,12 +133,10 @@ Use "hrp [command] --help" for more information about a command.
 [locust]: https://github.com/locustio/locust
 [jmespath]: https://jmespath.org/
 [allure]: https://docs.qameta.io/allure/
-[HAR]: https://en.wikipedia.org/wiki/HAR_(file_format)
+[HAR]: http://httparchive.org/
 [hashicorp plugin]: https://github.com/hashicorp/go-plugin
 [go plugin]: https://pkg.go.dev/plugin
-[版本发布日志]: docs/CHANGELOG.md
+[CHANGELOG]: docs/CHANGELOG.md
 [pushgateway]: https://github.com/prometheus/pushgateway
 [survey]: https://wj.qq.com/s2/9699514/0d19/
-[user-survey-report]: https://httprunner.com/blog/user-survey-report/
-[English]: README.en.md
-[pytest]: https://docs.pytest.org/
+[中文]: README.md
