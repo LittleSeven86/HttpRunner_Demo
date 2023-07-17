@@ -247,12 +247,12 @@ def ensure_cli_args(args: List) -> List:
         logger.warning("remove deprecated argument: --failfast")
         args.pop(args.index("--failfast"))
 
-    # convert --report-file to --html
+    # convert --report-file to --allure_result
     if "--report-file" in args:
-        logger.warning("replace deprecated argument --report-file with --html")
+        logger.warning("replace deprecated argument --report-file with --allure_result")
         index = args.index("--report-file")
-        args[index] = "--html"
-        args.append("--self-contained-html")
+        args[index] = "--allure_result"
+        args.append("--self-contained-allure_result")
 
     # keep compatibility with --save-tests in v2
     if "--save-tests" in args:

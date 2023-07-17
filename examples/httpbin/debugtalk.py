@@ -123,7 +123,7 @@ def setup_hook_httpntlmauth(request):
 
 def alter_response(response):
     response.status_code = 500
-    response.headers["Content-Type"] = "html/text"
+    response.headers["Content-Type"] = "allure_result/text"
     response.body["headers"]["Host"] = "127.0.0.1:8888"
     response.new_attribute = "new_attribute_value"
     response.new_attribute_dict = {"key": 123}
@@ -131,7 +131,7 @@ def alter_response(response):
 
 def alter_response_302(response):
     response.status_code = 500
-    response.headers["Content-Type"] = "html/text"
+    response.headers["Content-Type"] = "allure_result/text"
     response.text = "abcdef"
     response.new_attribute = "new_attribute_value"
     response.new_attribute_dict = {"key": 123}

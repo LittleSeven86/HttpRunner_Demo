@@ -133,7 +133,7 @@ def multipart_encoder(**kwargs):
         if file_type:
             return file_type.mime
         else:
-            return "text/html"
+            return "text/allure_result"
 
     ensure_upload_ready()
     fields_dict = {}

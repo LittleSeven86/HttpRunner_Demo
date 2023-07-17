@@ -219,15 +219,15 @@ class TestCompat(unittest.TestCase):
         args3 = [
             "examples/postman_echo/request_methods/hardcode.yml",
             "--report-file",
-            "report.html",
+            "report.allure_result",
         ]
         self.assertEqual(
             compat.ensure_cli_args(args3),
             [
                 "examples/postman_echo/request_methods/hardcode.yml",
-                "--html",
-                "report.html",
-                "--self-contained-html",
+                "--allure_result",
+                "report.allure_result",
+                "--self-contained-allure_result",
             ],
         )
 
@@ -236,15 +236,15 @@ class TestCompat(unittest.TestCase):
             "--failfast",
             "--save-tests",
             "--report-file",
-            "report.html",
+            "report.allure_result",
         ]
         self.assertEqual(
             compat.ensure_cli_args(args4),
             [
                 "examples/postman_echo/request_methods/hardcode.yml",
-                "--html",
-                "report.html",
-                "--self-contained-html",
+                "--allure_result",
+                "report.allure_result",
+                "--self-contained-allure_result",
             ],
         )
 

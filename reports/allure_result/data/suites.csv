@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jul 17 22:18:10 CST 2023","Mon Jul 17 22:18:10 CST 2023","276","demo.testcases.接口关联demo","relation_test","TestCaseRelation","","","关联测试用例","TestCase ID: cb928b11-38a3-4579-9127-d6bd56c5c2a9"
+"passed","Mon Jul 17 22:18:10 CST 2023","Mon Jul 17 22:18:10 CST 2023","279","demo.testcases.接口关联demo","relation_test","TestCaseRelation","","","关联测试用例","TestCase ID: cafb9e9e-1eb6-49cc-8a52-2b371086c410"
+"broken","Mon Jul 17 22:18:10 CST 2023","Mon Jul 17 22:18:10 CST 2023","4","demo.testcases.接口关联demo","register_demo_test","TestCaseRegisterDemo","","","注册接口","TestCase ID: a81f505c-89c1-448e-91cc-d14a4bfb13c6"
+"broken","Mon Jul 17 22:18:09 CST 2023","Mon Jul 17 22:18:09 CST 2023","4","demo.testcases.接口关联demo","login_demo_test","TestCaseLoginDemo","","","登陆接口","TestCase ID: 193dcb22-daf8-4058-86ff-58f39703ca0a"
+"passed","Mon Jul 17 22:18:09 CST 2023","Mon Jul 17 22:18:10 CST 2023","280","demo.testcases.接口关联demo","relation_test","TestCaseRelation","","","关联测试用例","TestCase ID: f0890673-fcdb-435e-a522-28052538e66e"

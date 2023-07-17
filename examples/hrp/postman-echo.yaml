@@ -614,7 +614,7 @@ teststeps:
           msg: assert response status code
         - check: headers."Content-Type"
           assert: equals
-          expect: text/html; charset=utf-8
+          expect: text/allure_result; charset=utf-8
           msg: assert response header Content-Type
     - name: ""
       request:
@@ -726,7 +726,7 @@ teststeps:
           msg: assert response status code
         - check: headers."Content-Type"
           assert: equals
-          expect: text/html; charset=utf-8
+          expect: text/allure_result; charset=utf-8
           msg: assert response header Content-Type
     - name: ""
       request:

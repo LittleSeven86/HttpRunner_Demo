@@ -25,7 +25,7 @@ class TestCaseHooks(HttpRunner):
             .teardown_hook("${alter_response($response)}")
             .validate()
             .assert_equal("status_code", 500)
-            .assert_equal('headers."Content-Type"', "html/text")
+            .assert_equal('headers."Content-Type"', "allure_result/text")
             .assert_equal("body.headers.Host", "127.0.0.1:8888")
         ),
     ]

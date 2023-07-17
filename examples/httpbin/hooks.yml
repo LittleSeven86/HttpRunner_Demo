@@ -32,5 +32,5 @@ teststeps:
         - ${alter_response($response)}
     validate:
         - eq: ["status_code", 500]
-        - eq: [headers."Content-Type", "html/text"]
+        - eq: [headers."Content-Type", "allure_result/text"]
         - eq: [body.headers.Host, "127.0.0.1:8888"]

@@ -357,7 +357,7 @@ class StepRequestExtraction(IStep):
         return self
 
     # def with_regex(self):
-    #     # TODO: extract response html with regex
+    #     # TODO: extract response allure_result with regex
     #     pass
     #
     # def with_jsonpath(self):

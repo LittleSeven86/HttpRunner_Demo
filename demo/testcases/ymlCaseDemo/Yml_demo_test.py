@@ -33,6 +33,7 @@ class TestCaseYmlDemo(HttpRunner):
             .with_json({"mobile_phone": "$mobile_phone", "pwd": "$pwd"})
             .validate()
             .assert_equal("status_code", 200)
+            .assert_equal("connect_database('demo/config.yml'", "$sql)")
         ),
     ]
 

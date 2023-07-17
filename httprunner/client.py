@@ -152,7 +152,7 @@ class HttpSession(requests.Session):
             Auth tuple or callable to enable Basic/Digest/Custom HTTP Auth.
         :param timeout: (optional)
             How long to wait for the server to send data before giving up, as a float, or \
-            a (`connect timeout, read timeout <user/advanced.html#timeouts>`_) tuple.
+            a (`connect timeout, read timeout <user/advanced.allure_result#timeouts>`_) tuple.
             :type timeout: float or tuple
         :param allow_redirects: (optional)
             Set to True by default.

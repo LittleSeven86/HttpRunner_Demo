@@ -1,7 +1,0 @@
-====== response details ======
-status_code: 502
-headers: {
-    "Connection": "close",
-    "Content-Length": "0"
-}
-body: b''

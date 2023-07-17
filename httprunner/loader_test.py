@@ -14,7 +14,7 @@ class TestLoader(unittest.TestCase):
         self.assertEqual(len(testcase_obj.teststeps), 4)
 
     def test_load_json_file_file_format_error(self):
-        json_tmp_file = "tmp.json"
+        json_tmp_file = "allure_data.json"
         # create empty file
         with open(json_tmp_file, "w") as f:
             f.write("")
